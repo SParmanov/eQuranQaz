@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="arabic_names">
+        <item>الفاتحة</item>
+        <item>البقرة</item>
+        <item>آل عمران</item>
+        <item>النساء</item>
+        <item>المائدة</item>
+        <item>الأنعام</item>
+        <item>الأعراف</item>
+        <item>الأنفال</item>
+        <item>التوبة</item>
+        <item>يونس</item>
+        <item>هود</item>
+        <item>يوسف</item>
+        <item>الرعد</item>
+        <item>ابراهيم</item>
+        <item>الحجر</item>
+        <item>النحل</item>
+        <item>الإسراء</item>
+        <item>الكهف</item>
+        <item>مريم</item>
+        <item>طه</item>
+        <item>الأنبياء</item>
+        <item>الحج</item>
+        <item>المؤمنون</item>
+        <item>النور</item>
+        <item>الفرقان</item>
+        <item>الشعراء</item>
+        <item>النمل</item>
+        <item>القصص</item>
+        <item>العنكبوت</item>
+        <item>الروم</item>
+        <item>لقمان</item>
+        <item>السجدة</item>
+        <item>الأحزاب</item>
+        <item>سبإ</item>
+        <item>فاطر</item>
+        <item>يس</item>
+        <item>الصافات</item>
+        <item>ص</item>
+        <item>الزمر</item>
+        <item>غافر</item>
+        <item>فصلت</item>
+        <item>الشورى</item>
+        <item>الزخرف</item>
+        <item>الدخان</item>
+        <item>الجاثية</item>
+        <item>الأحقاف</item>
+        <item>محمد</item>
+        <item>الفتح</item>
+        <item>الحجرات</item>
+        <item>ق</item>
+        <item>الذاريات</item>
+        <item>الطور</item>
+        <item>النجم</item>
+        <item>القمر</item>
+        <item>الرحمن</item>
+        <item>الواقعة</item>
+        <item>الحديد</item>
+        <item>المجادلة</item>
+        <item>الحشر</item>
+        <item>الممتحنة</item>
+        <item>الصف</item>
+        <item>الجمعة</item>
+        <item>المنافقون</item>
+        <item>التغابن</item>
+        <item>الطلاق</item>
+        <item>التحريم</item>
+        <item>الملك</item>
+        <item>القلم</item>
+        <item>الحاقة</item>
+        <item>المعارج</item>
+        <item>نوح</item>
+        <item>الجن</item>
+        <item>المزمل</item>
+        <item>المدثر</item>
+        <item>القيامة</item>
+        <item>الانسان</item>
+        <item>المرسلات</item>
+        <item>النبإ</item>
+        <item>النازعات</item>
+        <item>عبس</item>
+        <item>التكوير</item>
+        <item>الإنفطار</item>
+        <item>المطففين</item>
+        <item>الإنشقاق</item>
+        <item>البروج</item>
+        <item>الطارق</item>
+        <item>الأعلى</item>
+        <item>الغاشية</item>
+        <item>الفجر</item>
+        <item>البلد</item>
+        <item>الشمس</item>
+        <item>الليل</item>
+        <item>الضحى</item>
+        <item>الشرح</item>
+        <item>التين</item>
+        <item>العلق</item>
+        <item>القدر</item>
+        <item>البينة</item>
+        <item>الزلزلة</item>
+        <item>العاديات</item>
+        <item>القارعة</item>
+        <item>التكاثر</item>
+        <item>العصر</item>
+        <item>الهمزة</item>
+        <item>الفيل</item>
+        <item>قريش</item>
+        <item>الماعون</item>
+        <item>الكوثر</item>
+        <item>الكافرون</item>
+        <item>النصر</item>
+        <item>المسد</item>
+        <item>الإخلاص</item>
+        <item>الفلق</item>
+        <item>الناس</item>
+    </string-array>
+
+    <string-array name="kazakh_names">
+        <item>Фатиха</item>
+        <item>Бақара</item>
+        <item>Әли Имран</item>
+        <item>Ниса</item>
+        <item>Мәида</item>
+        <item>Ән\'ам</item>
+        <item>А\'раф</item>
+        <item>Әнфал</item>
+        <item>Тәубә</item>
+        <item>Юнус</item>
+        <item>Һуд</item>
+        <item>Юсуф</item>
+        <item>Ра\'д</item>
+        <item>Ибраһим</item>
+        <item>Хижр</item>
+        <item>Нахл</item>
+        <item>Исра</item>
+        <item>Кәһф</item>
+        <item>Мәриәм</item>
+        <item>Таһа</item>
+        <item>Әнбия</item>
+        <item>Хаж</item>
+        <item>Му\'минун</item>
+        <item>Нур</item>
+        <item>Фурқан</item>
+        <item>Шу\'ара</item>
+        <item>Нәмл</item>
+        <item>Қасас</item>
+        <item>\'Анкәбут</item>
+        <item>Рум</item>
+        <item>Луқман</item>
+        <item>Сәждә</item>
+        <item>Ахзаб</item>
+        <item>Сәбә\'</item>
+        <item>Фатыр</item>
+        <item>Иасин</item>
+        <item>Саффат</item>
+        <item>Сад</item>
+        <item>Зумәр</item>
+        <item>Му\'мин</item>
+        <item>Фуссиләт</item>
+        <item>Шура</item>
+        <item>Зухруф</item>
+        <item>Духан</item>
+        <item>Жәсия</item>
+        <item>Ахқаф</item>
+        <item>Мухаммәд</item>
+        <item>Фәтих</item>
+        <item>Хужурат</item>
+        <item>Қаф</item>
+        <item>Зарият</item>
+        <item>Тур</item>
+        <item>Нәжм</item>
+        <item>Қамар</item>
+        <item>Рахман</item>
+        <item>Уақи\'а</item>
+        <item>Хадид</item>
+        <item>Мужәдәлә</item>
+        <item>Хашр</item>
+        <item>Мумтәхинә</item>
+        <item>Сафф</item>
+        <item>Жум\'а</item>
+        <item>Мунафиқун</item>
+        <item>Тәғабун</item>
+        <item>Таләқ</item>
+        <item>Тахрим</item>
+        <item>Мүлк</item>
+        <item>Қалам</item>
+        <item>Хаққа</item>
+        <item>Мә\'ариж</item>
+        <item>Нух</item>
+        <item>Жин</item>
+        <item>Муззәммил</item>
+        <item>Муддәссир</item>
+        <item>Қиямә</item>
+        <item>Инсан</item>
+        <item>Мурсәләт</item>
+        <item>Нәбә\'</item>
+        <item>Нази\'ат</item>
+        <item>\'Абәсә</item>
+        <item>Тәкуир</item>
+        <item>Инфитар</item>
+        <item>Мутаффифин</item>
+        <item>Иншиқақ</item>
+        <item>Буруж</item>
+        <item>Тариқ</item>
+        <item>А\'лә</item>
+        <item>Ғашия</item>
+        <item>Фәжр</item>
+        <item>Бәләд</item>
+        <item>Шәмс</item>
+        <item>Ләил</item>
+        <item>Духа</item>
+        <item>Инширах</item>
+        <item>Тин</item>
+        <item>\'Аләқ</item>
+        <item>Қадр</item>
+        <item>Бәйинә</item>
+        <item>Зилзал</item>
+        <item>\'Адият</item>
+        <item>Қари\'а</item>
+        <item>Тәкәсур</item>
+        <item>\'Аср</item>
+        <item>Һумәзә</item>
+        <item>Фил</item>
+        <item>Қурәиш</item>
+        <item>Мә\'ун</item>
+        <item>Кәусәр</item>
+        <item>Кафирун</item>
+        <item>Наср</item>
+        <item>Тәббәт</item>
+        <item>Ихлас</item>
+        <item>Фәләқ</item>
+        <item>Нас</item>
+    </string-array>
+
+    <string-array name="kazakh_names_new">
+        <item>әл-Фатиха</item>
+        <item>әл-Бақара</item>
+        <item>Әли-Имран</item>
+        <item>ан-Ниса</item>
+        <item>әл-Мәида</item>
+        <item>әл-Ән\'ам</item>
+        <item>әл-А\'раф</item>
+        <item>әл-Әнфал</item>
+        <item>ат-Тәубә</item>
+        <item>Жүніс</item>
+        <item>Һуд</item>
+        <item>Жүсіп</item>
+        <item>Ра\'д</item>
+        <item>Ибраһим</item>
+        <item>әл-Хижр</item>
+        <item>ан-Нахл</item>
+        <item>әл-Исра</item>
+        <item>әл-Кәһф</item>
+        <item>Мәриәм</item>
+        <item>Таһа</item>
+        <item>әл-Әнбия</item>
+        <item>әл-Хаж</item>
+        <item>әл-Му\'минун</item>
+        <item>ән-Нур</item>
+        <item>әл-Фурқан</item>
+        <item>аш-Шу\'ара</item>
+        <item>ән-Нәмл</item>
+        <item>әл-Қасас</item>
+        <item>әл-\'Анкәбут</item>
+        <item>ар-Рум</item>
+        <item>Луқман</item>
+        <item>әс-Сәждә</item>
+        <item>әл-Ахзаб</item>
+        <item>Сәбә\'</item>
+        <item>Фатыр</item>
+        <item>Иасин</item>
+        <item>ас-Саффат</item>
+        <item>Сад</item>
+        <item>әз-Зумәр</item>
+        <item>әл-Му\'мин</item>
+        <item>Фуссиләт</item>
+        <item>аш-Шура</item>
+        <item>әз-Зухруф</item>
+        <item>ад-Духан</item>
+        <item>әл-Жәсия</item>
+        <item>әл-Ахқаф</item>
+        <item>Мухаммәд</item>
+        <item>әл-Фәтих</item>
+        <item>әл-Хужурат</item>
+        <item>Қаф</item>
+        <item>әз-Зарият</item>
+        <item>ат-Тур</item>
+        <item>ән-Нәжм</item>
+        <item>әл-Қамар</item>
+        <item>ар-Рахман</item>
+        <item>әл-Уақи\'а</item>
+        <item>әл-Хадид</item>
+        <item>әл-Мужәдәлә</item>
+        <item>әл-Хашр</item>
+        <item>әл-Мумтәхинә</item>
+        <item>әс-Сафф</item>
+        <item>әл-Жум\'а</item>
+        <item>әл-Мунафиқун</item>
+        <item>әт-Тәғабун</item>
+        <item>ат-Таләқ</item>
+        <item>әт-Тахрим</item>
+        <item>әл-Мүлк</item>
+        <item>әл-Қалам</item>
+        <item>әл-Хаққа</item>
+        <item>әл-Мә\'ариж</item>
+        <item>Нух</item>
+        <item>әл-Жин</item>
+        <item>әл-Муззәммил</item>
+        <item>әл-Муддәссир</item>
+        <item>әл-Қиямә</item>
+        <item>әл-Инсан</item>
+        <item>әл-Мурсәләт</item>
+        <item>ән-Нәбә\'</item>
+        <item>ән-Нази\'ат</item>
+        <item>\'Абәсә</item>
+        <item>әт-Тәкуир</item>
+        <item>әл-Инфитар</item>
+        <item>әл-Мутаффифин</item>
+        <item>әл-Иншиқақ</item>
+        <item>әл-Буруж</item>
+        <item>ат-Тариқ</item>
+        <item>әл-А\'лә</item>
+        <item>әл-Ғашия</item>
+        <item>әл-Фәжр</item>
+        <item>әл-Бәләд</item>
+        <item>әш-Шәмс</item>
+        <item>әл-Ләил</item>
+        <item>әд-Духа</item>
+        <item>аш-Шарх</item>
+        <item>ат-Тин</item>
+        <item>әл-\'Аләқ</item>
+        <item>әл-Қадр</item>
+        <item>әл-Бәйинә</item>
+        <item>әз-Зилзал</item>
+        <item>әл-\'Адият</item>
+        <item>әл-Қари\'а</item>
+        <item>әл-Тәкәсур</item>
+        <item>әл-\'Аср</item>
+        <item>әл-Һумәзә</item>
+        <item>әл-Фил</item>
+        <item>Қурәиш</item>
+        <item>әл-Мә\'ун</item>
+        <item>әл-Кәусәр</item>
+        <item>әл-Кафирун</item>
+        <item>ан-Наср</item>
+        <item>әл-Мәсад</item>
+        <item>әл-Ықылас</item>
+        <item>әл-Фәләқ</item>
+        <item>ан-Нас</item>
+    </string-array>
+
+    <string-array name="kazakh_names_mean">
+        <item>Кітап ашушы</item>
+        <item>Сиыр</item>
+        <item>Имран жанұясы</item>
+        <item>Әйелдер</item>
+        <item>Асқа толы дастарқан</item>
+        <item>Шаруа малдары</item>
+        <item>Биік тосқауылдар</item>
+        <item>Соғыс олжалары</item>
+        <item>Тәубеге келу</item>
+        <item>Жүніс пайғамбар</item>
+        <item>Һұд пайғамбар</item>
+        <item>Жүсіп пайғамбар</item>
+        <item>Күннің Күркіреуі</item>
+        <item>Ибраһим пайғамбар</item>
+        <item>Хиджр</item>
+        <item>Аралар</item>
+        <item>Түнгі сапар</item>
+        <item>Үңгір</item>
+        <item>Мәриям</item>
+        <item>Та һа</item>
+        <item>Пайғамбарлар</item>
+        <item>Қажылық</item>
+        <item>Мүміндер</item>
+        <item>Нұр</item>
+        <item>Ажыратым</item>
+        <item>Ақындар</item>
+        <item>Құмырсқалар</item>
+        <item>Қисса</item>
+        <item>Өрмекші</item>
+        <item>Римдіктер</item>
+        <item>Луқман</item>
+        <item>Сәжде</item>
+        <item>Біріккен күштер</item>
+        <item>Сәбә\' патшалығы</item>
+        <item>Жаратушы</item>
+        <item>Йа Син</item>
+        <item>Сапқа тізілгендер</item>
+        <item>Сад</item>
+        <item>Бұқара</item>
+        <item>Кешірімді</item>
+        <item>Түсіндіруші</item>
+        <item>Кеңес</item>
+        <item>Әшекейлер</item>
+        <item>Түтін</item>
+        <item>Тізебүккендер</item>
+        <item>Құм төбелер</item>
+        <item>Мұхаммед пайғамбар</item>
+        <item>Жеңіс</item>
+        <item>Бөлмелер</item>
+        <item>Қаф</item>
+        <item>Соғып ұшырушы желдер</item>
+        <item>Тау</item>
+        <item>Жұлдыз</item>
+        <item>Ай</item>
+        <item>Қайырымды</item>
+        <item>Болуы сөзсіз</item>
+        <item>Темір</item>
+        <item>Дауласушы әйел</item>
+        <item>Қуылу</item>
+        <item>Сыналушы</item>
+        <item>Қатарлар</item>
+        <item>Жұма</item>
+        <item>Мунафықтар</item>
+        <item>Көңіл қайту</item>
+        <item>Ажырасу</item>
+        <item>Тыйым салу</item>
+        <item>Билік</item>
+        <item>Қалам</item>
+        <item>Хақ</item>
+        <item>Баспалдақтар</item>
+        <item>Нұх пайғамбар</item>
+        <item>Жін</item>
+        <item>Бүркеніп жатушы</item>
+        <item>Жасырулы</item>
+        <item>Қайта тірілу</item>
+        <item>Сана иесі</item>
+        <item>Эмиссарлар</item>
+        <item>Жаңалық</item>
+        <item>Жанды суырушылар</item>
+        <item>Томсыраю</item>
+        <item>Күн бүктелген сәтте</item>
+        <item>Жару</item>
+        <item>Саудада алдайтындар</item>
+        <item>Бөліну</item>
+        <item>Жұлдыздар тобы</item>
+        <item>Түнгі жолаушы</item>
+        <item>Аса биік</item>
+        <item>Қаптайтын қиямет</item>
+        <item>Арай</item>
+        <item>Қала</item>
+        <item>Күн</item>
+        <item>Түн</item>
+        <item>Таң</item>
+        <item>Жұбату</item>
+        <item>Інжір</item>
+        <item>Қою қан</item>
+        <item>Қадір</item>
+        <item>Ашық белгі</item>
+        <item>Зілзәлә</item>
+        <item>(Шабушылар</item>
+        <item>Дүрсіл</item>
+        <item>Көбею</item>
+        <item>Уақыт</item>
+        <item>Қорлаушы</item>
+        <item>Піл</item>
+        <item>Қурәиш</item>
+        <item>Қайыр</item>
+        <item>Молшылық</item>
+        <item>Сенбейтіндер</item>
+        <item>Көмек</item>
+        <item>Пальма талшығы</item>
+        <item>Ықылас</item>
+        <item>Таңсәрі</item>
+        <item>Адамзат</item>
+</string-array>
+
+</resources>

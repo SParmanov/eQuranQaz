@@ -1,0 +1,41 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color2</item>
+        <item name="colorPrimaryDark">@color/color0</item>
+        <item name="colorAccent">@color/color1</item>
+    </style>
+        <!--For Day-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/color1</item>
+        <item name="colorPrimaryDark">@color/color0</item>
+        <item name="colorAccent">@color/color3</item>
+        <item name="color0">@color/color0</item>
+        <item name="color1">@color/color1</item>
+        <item name="color2">@color/color2</item>
+        <item name="color3">@color/color3</item>
+        <item name="color4">@color/color4</item>
+        <item name="background1">@color/color4</item>
+        <item name="background2">@color/color5</item>
+        <item name="android:windowAnimationStyle">@style/anim</item>
+    </style>
+    <!--For Night-->
+    <style name="dark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/color11</item>
+        <item name="colorPrimaryDark">@color/color00</item>
+        <item name="colorAccent">@color/color33</item>
+        <item name="color0">@color/color00</item>
+        <item name="color1">@color/color11</item>
+        <item name="color2">@color/color22</item>
+        <item name="color3">@color/color33</item>
+        <item name="color4">@color/color44</item>
+        <item name="background1">@color/color11</item>
+        <item name="background2">@color/color00</item>
+        <item name="android:windowAnimationStyle">@style/anim</item>
+    </style>
+    
+    <style name="anim">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+</resources>

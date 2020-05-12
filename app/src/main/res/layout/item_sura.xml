@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="30dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="30dp"
+    android:background="?attr/background1"
+    android:orientation="horizontal"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_horizontal"
+        android:paddingRight="10dp"
+        android:text="ID"
+        android:textColor="@color/color1"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/kazakh_names"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/id"
+        android:text="kazakhNames"
+        android:textColor="?attr/color2"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lengthSura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/kazakh_names"
+        android:layout_toRightOf="@+id/id"
+        android:text="lengthSura"
+        android:textColor="@color/color3"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/kuranAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lengthSura"
+        android:layout_toRightOf="@+id/id"
+        android:text="kuranAddress"
+        android:textColor="@color/color3"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/arabic_names"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="arabicNames"
+        android:textColor="@color/color1"
+        android:textSize="40sp" />
+</RelativeLayout>

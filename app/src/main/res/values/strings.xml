@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">eQuran Qaz</string>
+    <string name="item_1">Намаз</string>
+    <string name="item_2">Құран</string>
+    <string name="item_3">Көркем есімдер</string>
+    <string name="item_4">Компас</string>
+    <string name="item_5">Баптаулар</string>
+
+    <string name="bab">.Bab</string>
+    <string name="empty"> </string>
+
+
+</resources>
