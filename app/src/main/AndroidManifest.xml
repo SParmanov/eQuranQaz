@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="e.Quran.Qaz.ui.kuran.KuranBook"></activity>
         <activity android:name="e.Quran.Qaz.ui.kuran.SuraDetailActivity" />
         <activity android:name="e.Quran.Qaz.ui.asma.AsmaDetailActivity" />
         <activity android:name="e.Quran.Qaz.ui.main.HomeActivity" />

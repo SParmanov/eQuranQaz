@@ -8,15 +8,16 @@
         android:title="@string/item_2"
         />
     <item
+        android:id="@+id/namaz"
+        android:icon="@drawable/ic_book_black_24dp"
+        android:title="@string/item_1"
+        />
+    <item
         android:id="@+id/asma"
         android:icon="@drawable/icon_asma"
         android:title="@string/item_3"
         />
-    <item
-        android:id="@+id/namaz"
-        android:icon="@drawable/icon_namaz"
-        android:title="@string/item_1"
-        />
+
     <item
         android:id="@+id/setting"
         android:icon="@drawable/ic_settings_applications_black_24dp"

@@ -16,6 +16,7 @@ import e.Quran.Qaz.R;
 
 import java.util.ArrayList;
 
+import e.Quran.Qaz.adapter.AsmaAdapter;
 import e.Quran.Qaz.model.Asma;
 
 public class AsmaFragment extends Fragment {

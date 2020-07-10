@@ -1,9 +1,9 @@
 package e.Quran.Qaz.ui.kuran;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -13,11 +13,13 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
 
 import e.Quran.Qaz.R;
+import e.Quran.Qaz.adapter.KuranDetailAdapter;
 
 import static android.view.View.GONE;
 import static android.view.View.SCROLL_INDICATOR_BOTTOM;
@@ -47,8 +49,6 @@ public class SuraDetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         Log.e(TAG, "onCreate()");
 
-        //scheherazade = Typeface.createFromAsset(this.getAssets(), "Scheherazade.ttf");
-
 
         setContentView(R.layout.activity_kuran_detail);
         id = getIntent().getIntExtra(ARG_ID, 1);
@@ -63,7 +63,7 @@ public class SuraDetailActivity extends AppCompatActivity {
 
         int index = id - 1;
         String title = (index + 1) + " " + kazakh_names[index] + " " + arabic_names[index];
-        setTitleColor(000);
+        setTitleColor(0);
         getSupportActionBar().setTitle(title);
         scheherazade = Typeface.createFromAsset(this.getAssets(), "Scheherazade.ttf");
 
@@ -126,21 +126,13 @@ public class SuraDetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Intent intent;
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                finish();
-                break;
-            case R.id.book:
-                intent = new Intent(this, KuranBook.class);
-                startActivity(intent);
-                break;
-            default:
-                break;
-        }
+        if (item.getItemId() == android.R.id.home)
+            finish();
+
         return super.onOptionsItemSelected(item);
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onStart() {
         super.onStart();

@@ -14,12 +14,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import e.Quran.Qaz.R;
 import e.Quran.Qaz.ui.asma.AsmaFragment;
 import e.Quran.Qaz.ui.kuran.KuranFragment;
-import e.Quran.Qaz.ui.namaz.NamazFragment;
+import e.Quran.Qaz.ui.kuranPdf.KuranPdfFragment;
 import e.Quran.Qaz.ui.setting.SettingFragment;
 
 public class HomeActivity extends AppCompatActivity {
     SharedPreferences sharedPreferences;
-    NamazFragment namazFragment;
+    KuranPdfFragment kuranPdfFragment;
     Fragment kuranFragment;
     AsmaFragment asmaFragment;
     SettingFragment settingFragment;
@@ -52,9 +52,9 @@ public class HomeActivity extends AppCompatActivity {
             Fragment selectedFragment;
             switch (menuItem.getItemId()) {
                 case R.id.namaz:
-                    if (namazFragment == null)
-                        namazFragment = new NamazFragment();
-                    selectedFragment = namazFragment;
+                    if (kuranPdfFragment == null)
+                        kuranPdfFragment = new KuranPdfFragment();
+                    selectedFragment = kuranPdfFragment;
                     break;
                 case R.id.kuran:
                     if (kuranFragment == null)
