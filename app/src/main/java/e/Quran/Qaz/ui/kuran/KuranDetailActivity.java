@@ -1,6 +1,7 @@
 package e.Quran.Qaz.ui.kuran;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.os.Build;
@@ -20,19 +21,23 @@ import java.util.ArrayList;
 
 import e.Quran.Qaz.R;
 import e.Quran.Qaz.adapter.KuranDetailAdapter;
+import e.Quran.Qaz.model.KuranDetailWord;
 
 import static android.view.View.GONE;
 import static android.view.View.SCROLL_INDICATOR_BOTTOM;
 
-public class SuraDetailActivity extends AppCompatActivity {
+
+
+public class KuranDetailActivity extends AppCompatActivity {
     public static final String ARG_ID = "kuranId";
-    static String TAG = "SuraDetailActivity";
+    public static String TAG = "SuraDetailActivity";
     private int id;
     private Typeface scheherazade;
-    ListView listView;
-    final ArrayList<KuranDetailWord> kuranDetailWords = new ArrayList<>();
-    SharedPreferences sharedPreferences;
+    private ListView listView;
+    private final ArrayList<KuranDetailWord> kuranDetailWords = new ArrayList<>();
+    private SharedPreferences sharedPreferences;
     public static SharedPreferences sharedPreferences1;
+    private KuranDetailBottomSheet bottomSheet ;
 
 
     @Override
@@ -71,11 +76,9 @@ public class SuraDetailActivity extends AppCompatActivity {
         int trans = getResources().getIdentifier("translit" + "_" + (id), "array", this.getPackageName());
         int arabic = getResources().getIdentifier("arabic" + "_" + (id), "array", this.getPackageName());
 
-        //String[] arabic_names = getResources().getStringArray(R.array.arabic_names);
-        //String[] kazakh_names = getResources().getStringArray(R.array.kazakh_names_new);
+
+
         String[] kazakh_names_mean = getResources().getStringArray(R.array.kazakh_names_mean);
-
-
         String[] translit = getResources().getStringArray(trans);
         String[] kuranKazakh = getResources().getStringArray(kazakh);
         String[] kuranArabic = getResources().getStringArray(arabic);
@@ -113,6 +116,13 @@ public class SuraDetailActivity extends AppCompatActivity {
         header_text2.setText(kazakh_names_mean[id - 1]);
         header_text3.setText(kuranArabic[0]);
 
+        listView.setOnItemClickListener((parent, view1, position, id) -> {
+            if(0 != position){
+                bottomSheet = new KuranDetailBottomSheet(this.id, position);
+                bottomSheet.show(getSupportFragmentManager(),TAG);
+            }
+            else return;
+        });
     }
 
     @Override
@@ -148,14 +158,11 @@ public class SuraDetailActivity extends AppCompatActivity {
         KuranDetailAdapter itemsAdapter = new KuranDetailAdapter(this, kuranDetailWords);
         listView.setAdapter(itemsAdapter);
 
-
         sharedPreferences1 = this.getSharedPreferences("Visible", MODE_PRIVATE);
         int lastVisible = sharedPreferences1.getInt(id + "", 0);
 
-
         listView.setVerticalScrollbarPosition(SCROLL_INDICATOR_BOTTOM);
         listView.setSelection(lastVisible);
-
 
     }
 
@@ -179,7 +186,6 @@ public class SuraDetailActivity extends AppCompatActivity {
 
         edit1.putInt(id + "", a);
         edit1.commit();
-//        Log.e(TAG, h "onStop()");
     }
 
     @Override

@@ -49,14 +49,10 @@ public class KuranFragment extends Fragment {
         SurasAdapter adapter = new SurasAdapter(getContext(), suras);
 
 
-        surasList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(getActivity(), SuraDetailActivity.class);
-                intent.putExtra(SuraDetailActivity.ARG_ID, suras.get(position).id);
-                startActivity(intent);
-            }
+        surasList.setOnItemClickListener((parent, view1, position, id) -> {
+            Intent intent = new Intent(getActivity(), KuranDetailActivity.class);
+            intent.putExtra(KuranDetailActivity.ARG_ID, suras.get(position).id);
+            startActivity(intent);
         });
 
 

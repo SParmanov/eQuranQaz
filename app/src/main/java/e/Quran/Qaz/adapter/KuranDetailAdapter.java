@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
 import e.Quran.Qaz.R;
-import e.Quran.Qaz.ui.kuran.KuranDetailWord;
+import e.Quran.Qaz.model.KuranDetailWord;
 
 
 public class KuranDetailAdapter extends ArrayAdapter<KuranDetailWord> {
@@ -31,7 +31,7 @@ public class KuranDetailAdapter extends ArrayAdapter<KuranDetailWord> {
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         KuranDetailWord kuranDetailWord = getItem(position);
 
@@ -40,6 +40,7 @@ public class KuranDetailAdapter extends ArrayAdapter<KuranDetailWord> {
 
 
         }
+
         TextView id = convertView.findViewById(R.id.id);
         TextView translit = convertView.findViewById(R.id.translit);
         TextView kuranKazakh = convertView.findViewById(R.id.kuranKazakh);
@@ -73,11 +74,12 @@ public class KuranDetailAdapter extends ArrayAdapter<KuranDetailWord> {
         kuranArabic.setTypeface(scheherazade);
 
 
-        kuranArabic.setTextSize(font1 + 23);
+        kuranArabic.setTextSize(font1 + 30);
         translit.setTextSize(font2 + 3);
         kuranKazakh.setTextSize(font3 + 3);
 
 
         return convertView;
     }
+
 }

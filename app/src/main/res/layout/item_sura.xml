@@ -15,8 +15,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:fontFamily="@font/whitney_book"
         android:gravity="center_horizontal"
-        android:paddingRight="10dp"
+        android:paddingEnd="10dp"
         android:text="ID"
         android:textColor="@color/color1"
         android:textSize="20sp" />
@@ -25,7 +26,8 @@
         android:id="@+id/kazakh_names"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/id"
+        android:layout_toEndOf="@+id/id"
+        android:fontFamily="@font/whitney_book"
         android:text="kazakhNames"
         android:textColor="?attr/color2"
         android:textSize="20sp" />
@@ -35,20 +37,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/kazakh_names"
-        android:layout_toRightOf="@+id/id"
+        android:fontFamily="@font/whitney_book"
+        android:layout_toEndOf="@+id/id"
         android:text="lengthSura"
         android:textColor="@color/color3"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/kuranAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/lengthSura"
-        android:layout_toRightOf="@+id/id"
+        android:layout_toEndOf="@+id/id"
+        android:fontFamily="@font/whitney_book"
         android:text="kuranAddress"
         android:textColor="@color/color3"
-        android:textSize="10sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/arabic_names"

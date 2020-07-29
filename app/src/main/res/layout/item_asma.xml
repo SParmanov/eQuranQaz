@@ -19,12 +19,13 @@
             android:layout_centerHorizontal="true"
             android:textColor="?attr/color2"
             android:padding="5dp"
-            android:textSize="50dp"
+            android:textSize="50sp"
             />
         <TextView
             android:id="@+id/nameOfAllahKazakh"
             android:layout_below="@id/nameOfAllahArab"
             android:padding="5dp"
+            android:fontFamily="@font/whitney_book"
             android:layout_centerHorizontal="true"
             android:textSize="20sp"
             android:textColor="@color/color1"
