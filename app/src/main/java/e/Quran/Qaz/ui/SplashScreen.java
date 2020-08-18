@@ -12,7 +12,7 @@ import e.Quran.Qaz.ui.main.HomeActivity;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private static int SPLASH_TIME_OUT = 500;
+    private static int SPLASH_TIME_OUT = 600;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
