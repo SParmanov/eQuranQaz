@@ -87,7 +87,7 @@ public class KuranDetailBottomSheet extends BottomSheetDialogFragment {
         arabicTv.setText(arabicText);
         kazakhTv.setText(kazakhText);
 
-        arabicTv.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "Scheherazade.ttf"));
+        arabicTv.setTypeface(Typeface.createFromAsset(getContext().getAssets(), "scheherazade_font.ttf"));
         
         close.setOnClickListener(i -> dismiss());
         share.setOnClickListener(i ->share());

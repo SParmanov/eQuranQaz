@@ -1,9 +1,7 @@
 package e.Quran.Qaz.ui.kuran;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,13 +9,17 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.futuremind.recyclerviewfastscroll.FastScroller;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import e.Quran.Qaz.R;
 import e.Quran.Qaz.adapter.KuranDetailAdapter;
@@ -32,12 +34,12 @@ public class KuranDetailActivity extends AppCompatActivity {
     public static final String ARG_ID = "kuranId";
     public static String TAG = "SuraDetailActivity";
     private int id;
-    private Typeface scheherazade;
-    private ListView listView;
-    private final ArrayList<KuranDetailWord> kuranDetailWords = new ArrayList<>();
+
+    private RecyclerView listRV;
+    private final ArrayList<KuranDetailWord> ayats = new ArrayList<>();
     private SharedPreferences sharedPreferences;
-    public static SharedPreferences sharedPreferences1;
-    private KuranDetailBottomSheet bottomSheet ;
+    private LinearLayoutManager lm;
+
 
 
     @Override
@@ -59,7 +61,7 @@ public class KuranDetailActivity extends AppCompatActivity {
         id = getIntent().getIntExtra(ARG_ID, 1);
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setLogo(R.drawable.icon);
 
@@ -70,7 +72,7 @@ public class KuranDetailActivity extends AppCompatActivity {
         String title = (index + 1) + " " + kazakh_names[index] + " " + arabic_names[index];
         setTitleColor(0);
         getSupportActionBar().setTitle(title);
-        scheherazade = Typeface.createFromAsset(this.getAssets(), "Scheherazade.ttf");
+
 
         int kazakh = getResources().getIdentifier("kazakh" + "_" + (id), "array", this.getPackageName());
         int trans = getResources().getIdentifier("translit" + "_" + (id), "array", this.getPackageName());
@@ -84,45 +86,24 @@ public class KuranDetailActivity extends AppCompatActivity {
         String[] kuranArabic = getResources().getStringArray(arabic);
 
 
+
         if (id == 1) {
             for (int i = 0; i < translit.length; i++) {
-                kuranDetailWords.add(new KuranDetailWord((i + 1) + "", translit[i], kuranKazakh[i], kuranArabic[i]));
+                ayats.add(new KuranDetailWord((i + 1) + "", translit[i], kuranKazakh[i], kuranArabic[i]));
             }
         } else {
             for (int i = 1; i < translit.length; i++) {
 
-                kuranDetailWords.add(new KuranDetailWord(i + "", translit[i], kuranKazakh[i], kuranArabic[i]));
+                ayats.add(new KuranDetailWord(i + "", translit[i], kuranKazakh[i], kuranArabic[i]));
             }
         }
 
 
-        listView = findViewById(R.id.kuranDetailList);
+        listRV = findViewById(R.id.kuranDetailList);
 
 
         TextView header_text1, header_text2, header_text3;
 
-        View headerView = getLayoutInflater().inflate(R.layout.item_kuran_detail_header, null);
-
-        listView.addHeaderView(headerView);
-
-        header_text1 = findViewById(R.id.header_text1);
-        header_text2 = findViewById(R.id.header_text2);
-        header_text3 = findViewById(R.id.header_text3);
-
-        if (id == 1)
-            header_text3.setVisibility(GONE);
-        header_text3.setTypeface(scheherazade);
-        header_text1.setText(id + "." + kazakh_names[id - 1]);
-        header_text2.setText(kazakh_names_mean[id - 1]);
-        header_text3.setText(kuranArabic[0]);
-
-        listView.setOnItemClickListener((parent, view1, position, id) -> {
-            if(0 != position){
-                bottomSheet = new KuranDetailBottomSheet(this.id, position);
-                bottomSheet.show(getSupportFragmentManager(),TAG);
-            }
-            else return;
-        });
     }
 
     @Override
@@ -154,15 +135,18 @@ public class KuranDetailActivity extends AppCompatActivity {
             setTheme(R.style.AppTheme);
 
 
+        FastScroller fastScroller =  findViewById(R.id.fastscroll);
         Log.e(TAG, "onStart()");
-        KuranDetailAdapter itemsAdapter = new KuranDetailAdapter(this, kuranDetailWords);
-        listView.setAdapter(itemsAdapter);
+        KuranDetailAdapter itemsAdapter = new KuranDetailAdapter(ayats);
+        listRV.setAdapter(itemsAdapter);
+        fastScroller.setRecyclerView(listRV);
 
-        sharedPreferences1 = this.getSharedPreferences("Visible", MODE_PRIVATE);
-        int lastVisible = sharedPreferences1.getInt(id + "", 0);
+        sharedPreferences = this.getSharedPreferences("Visible", MODE_PRIVATE);
+        int lastVisible = sharedPreferences.getInt(id + "", 0);
 
-        listView.setVerticalScrollbarPosition(SCROLL_INDICATOR_BOTTOM);
-        listView.setSelection(lastVisible);
+        lm = new LinearLayoutManager(this);
+        listRV.setLayoutManager(lm);
+        listRV.setId(lastVisible);
 
     }
 
@@ -181,11 +165,11 @@ public class KuranDetailActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        SharedPreferences.Editor edit1 = sharedPreferences1.edit();
-        int a = listView.getFirstVisiblePosition();
+        SharedPreferences.Editor edit1 = sharedPreferences.edit();
+        int a = lm.findFirstVisibleItemPosition();
 
         edit1.putInt(id + "", a);
-        edit1.commit();
+        edit1.apply();
     }
 
     @Override

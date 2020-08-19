@@ -11,6 +11,10 @@ import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.futuremind.recyclerviewfastscroll.FastScroller;
 
 import java.util.ArrayList;
 
@@ -20,7 +24,8 @@ import e.Quran.Qaz.model.Sura;
 
 public class KuranFragment extends Fragment {
 
-    ListView surasList;
+    RecyclerView suraRV;
+    ArrayList<Sura> suras;
 
     @Nullable
     @Override
@@ -31,7 +36,9 @@ public class KuranFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        surasList = view.findViewById(R.id.list_sura);
+        suraRV = view.findViewById(R.id.list_sura);
+
+        FastScroller fastScroller =  view.findViewById(R.id.fastscroll);
 
 
         String[] kazakh_names = getResources().getStringArray(R.array.kazakh_names_new);
@@ -40,23 +47,25 @@ public class KuranFragment extends Fragment {
         String[] suraLength = getResources().getStringArray(R.array.suraLength);
 
 
-        final ArrayList<Sura> suras = new ArrayList<>();
+        suras = new ArrayList<>();
         for (int i = 0; i < 114; i++) {
             suras.add(new Sura(i + 1, kazakh_names[i], arabic_names[i], suraLength[i] + "", kuranAddress[i]));
         }
 
 
-        SurasAdapter adapter = new SurasAdapter(getContext(), suras);
+        SurasAdapter adapter = new SurasAdapter( suras , this::onClick);
+        suraRV.setAdapter(adapter);
+        fastScroller.setRecyclerView(suraRV);
+        suraRV.setLayoutManager(new LinearLayoutManager(getContext()));
 
 
-        surasList.setOnItemClickListener((parent, view1, position, id) -> {
-            Intent intent = new Intent(getActivity(), KuranDetailActivity.class);
-            intent.putExtra(KuranDetailActivity.ARG_ID, suras.get(position).id);
-            startActivity(intent);
-        });
+    }
 
+    public void onClick(int pos){
+        Intent intent = new Intent(getActivity(), KuranDetailActivity.class);
+        intent.putExtra(KuranDetailActivity.ARG_ID, suras.get(pos).id);
+        startActivity(intent);
 
-        surasList.setAdapter(adapter);
     }
 
 }

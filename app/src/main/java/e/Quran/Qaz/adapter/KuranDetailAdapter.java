@@ -1,17 +1,17 @@
 package e.Quran.Qaz.adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.futuremind.recyclerviewfastscroll.SectionTitleProvider;
 
 import java.util.ArrayList;
 
@@ -19,41 +19,35 @@ import e.Quran.Qaz.R;
 import e.Quran.Qaz.model.KuranDetailWord;
 
 
-public class KuranDetailAdapter extends ArrayAdapter<KuranDetailWord> {
-    private Typeface scheherazade;
+public class KuranDetailAdapter extends RecyclerView.Adapter<KuranDetailAdapter.ViewHolder> implements SectionTitleProvider {
     SharedPreferences sharedPreferences1;
+    private ArrayList<KuranDetailWord> ayats;
 
-
-    public KuranDetailAdapter(Context context, ArrayList<KuranDetailWord> users) {
-        super(context, 0, users);
-        scheherazade = Typeface.createFromAsset(context.getAssets(), "Scheherazade.ttf");
+    public KuranDetailAdapter(ArrayList<KuranDetailWord> ayats) {
+        this.ayats = ayats;
     }
 
     @NonNull
     @Override
-    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        KuranDetailWord kuranDetailWord = getItem(position);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_kuran_detail, parent,false);
 
-        if (convertView == null) {
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.item_kuran_detail, parent, false);
+        return new ViewHolder(view);
+    }
 
-
-        }
-
-        TextView id = convertView.findViewById(R.id.id);
-        TextView translit = convertView.findViewById(R.id.translit);
-        TextView kuranKazakh = convertView.findViewById(R.id.kuranKazakh);
-        TextView kuranArabic = convertView.findViewById(R.id.kuranArabic);
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
 
-        id.setText(kuranDetailWord.id + "");
+        KuranDetailWord ayat = ayats.get(position);
 
-        kuranKazakh.setText(kuranDetailWord.kuranKazakh);
-        translit.setText(kuranDetailWord.translit);
-        kuranArabic.setText(kuranDetailWord.kuranArabic);
+        holder.id.setText(String.valueOf(ayat.id));
+        holder.kuranKazakh.setText(ayat.kuranKazakh);
+        holder.translit.setText(ayat.translit);
+        holder.kuranArabic.setText(ayat.kuranArabic );
 
-        sharedPreferences1 = this.getContext().getSharedPreferences("Settings", Activity.MODE_PRIVATE);
+        sharedPreferences1 = holder.itemView.getContext().getSharedPreferences("Settings", Activity.MODE_PRIVATE);
 
         boolean switch1 = sharedPreferences1.getBoolean("switch111", true);
         boolean switch2 = sharedPreferences1.getBoolean("switch222", true);
@@ -64,22 +58,46 @@ public class KuranDetailAdapter extends ArrayAdapter<KuranDetailWord> {
         int font3 = sharedPreferences1.getInt("font3", 14);
 
         if (!switch1)
-            kuranArabic.setVisibility(convertView.GONE);
+            holder.kuranArabic.setVisibility(View.GONE);
         if (!switch2)
-            translit.setVisibility(convertView.GONE);
+            holder.translit.setVisibility(View.GONE);
         if (!switch3)
-            kuranKazakh.setVisibility(convertView.GONE);
+            holder.kuranKazakh.setVisibility(View.GONE);
 
 
-        kuranArabic.setTypeface(scheherazade);
+        holder.kuranArabic.setTextSize(font1 + 30);
+        holder.translit.setTextSize(font2 + 3);
+        holder.kuranKazakh.setTextSize(font3 + 3);
+
+    }
+
+    @Override
+    public String getSectionTitle(int position) {
+        return String.valueOf(++position);
+    }
+
+    @Override
+    public int getItemCount() {
+        return ayats.size();
+    }
+
+    class ViewHolder extends RecyclerView.ViewHolder{
 
 
-        kuranArabic.setTextSize(font1 + 30);
-        translit.setTextSize(font2 + 3);
-        kuranKazakh.setTextSize(font3 + 3);
+        TextView id ;
+        TextView translit ;
+        TextView kuranKazakh ;
+        TextView kuranArabic;
 
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
 
-        return convertView;
+            id = itemView.findViewById(R.id.id);
+            translit = itemView.findViewById(R.id.translit);
+            kuranKazakh = itemView.findViewById(R.id.kuranKazakh);
+            kuranArabic = itemView.findViewById(R.id.kuranArabic);
+
+        }
     }
 
 }
